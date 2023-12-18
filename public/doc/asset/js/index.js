@@ -1,7 +1,9 @@
 const app ={
   burgerMenu : document.querySelector('.navbar-burger'),
   init: function(){
-    app.burgerMenu.addEventListener('click',app.showBurgerMenu)
+    console.log('hello');
+    app.burgerMenu.addEventListener('click',app.showBurgerMenu);
+
   },
   showBurgerMenu: function(){
     const menu = document.querySelector("#burger-menu-show");
