@@ -3,7 +3,7 @@
 } */
 *{
   text-decoration: none;
-  color: inherit;
+  /* color: inherit; */
 }
 pre{
   height: 30rem;

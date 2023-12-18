@@ -1,9 +1,10 @@
 const app ={
+  count : 0,
   burgerMenu : document.querySelector('.navbar-burger'),
   init: function(){
-    console.log('hello');
+    console.log('init');
     app.burgerMenu.addEventListener('click',app.showBurgerMenu);
-
+    app.count ++
   },
   showBurgerMenu: function(){
     const menu = document.querySelector("#burger-menu-show");
