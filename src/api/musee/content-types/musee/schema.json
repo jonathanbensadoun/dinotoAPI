@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "musees",
+  "info": {
+    "singularName": "musee",
+    "pluralName": "musees",
+    "displayName": "musee"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    },
+    "dinosaures": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::dinosaure.dinosaure",
+      "inversedBy": "musees"
+    },
+    "adresse": {
+      "type": "string"
+    },
+    "cp": {
+      "type": "string"
+    },
+    "ville": {
+      "type": "string"
+    },
+    "site_web": {
+      "type": "string"
+    },
+    "mail": {
+      "type": "string"
+    },
+    "img": {
+      "type": "string"
+    }
+  }
+}

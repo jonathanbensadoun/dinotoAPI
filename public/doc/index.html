@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="fr" >
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DinotoAPI</title>
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/css/bulma-carousel.min.css"
+    />
+    <link rel="stylesheet" href="./asset/css/style.css" />
+
+  </head>
+  <body>
+
+      <nav class="navbar has-background-white-ter is-fixed-top" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="">
+            <h1 class="title">
+              DinotoAPI
+            </h1>
+
+          </a>
+
+          <a
+            role="button"
+            class="navbar-burger has-dropdown is-hoverable"
+            aria-label="menu"
+            aria-expanded="true"
+            data-target="navbarBasicExample"
+          >
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+
+
+      </div>
+
+        <div class="navbar-menu">
+          <div class="navbar-start">
+            <a class="navbar-item" href="#home"> Home </a>
+
+            <a class="navbar-item" href="#all"> Documentation </a>
+
+            <div class="navbar-item has-dropdown is-hoverable">
+              <a class="navbar-link"> More </a>
+
+              <div class="navbar-dropdown">
+                <a class="navbar-item" href="#about"> About </a>
+                <a class="navbar-item" href="mailto:jonathan.ben-sadoun@oclock.school"> Contact </a>
+                <hr class="navbar-divider" />
+                <a class="navbar-item" href="mailto:jonathan.ben-sadoun@oclock.school"> Report an issue </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- <div class="navbar-end">
+            <div class="navbar-item">
+              <div class="buttons">
+                <a class="button is-primary">
+                  <strong>Sign up</strong>
+                </a>
+                <a class="button is-light"> Log in </a>
+              </div>
+            </div>
+          </div> -->
+        </div>
+        <div class="container-burger-menu ">
+
+          <div id="burger-menu-show" class="box has-background-white-ter is-hidden">
+            <ul class="columns">
+                <li class="column"><a href="#home" >Home</a></li>
+
+                <li class="column"><a href="#about" class="a-menu-burger">About</a></li>
+
+                <li class="column"><a href="mailto: jonathan.ben-sadoun@oclock.school" class="a-menu-burger">Contact</a></li>
+
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+
+
+    <section class="section ">
+      <div class="container">
+        <h1 class="title mt-4" id="home">DinotoAPI</h1>
+        <p class="subtitle" id="about">
+          Bienvenue sur <strong>DinotoAPI </strong> - Votre source
+          d'informations sur les dinosaures ! <strong>dinosaures</strong>!
+        </p>
+        <p class="subtitle is-5 MT-4">
+          DinotoAPI offre une plongée fascinante dans le monde des dinosaures,
+          vous permettant d'accéder à une riche base de données d'informations
+          sur ces créatures préhistoriques. Que vous soyez passionné de
+          paléontologie, un amateur de dinosaures, ou simplement curieux, notre
+          API vous fournit un accès simple et efficace à une mine
+          d'informations.
+        </p>
+
+        <div class="block mt-4">
+          <p>Voici quelques exemples :</p>
+        </div>
+        <a href="#all">
+          <div class="block m-4">
+            <span class="tag is-info">GET </span>
+            http://localhost:1337/api/dinosaures/
+          </div>
+        </a>
+        <a href="#continent">
+          <div class="block m-4">
+            <span class="tag is-info">GET </span>
+            http://localhost:1337/api/dinosaures/1?populate=continent
+          </div>
+        </a>
+        <a href="#environement">
+          <div class="block m-4">
+            <span class="tag is-info">GET </span>
+            http://localhost:1337/api/dinosaures/1?populate=environement
+          </div>
+        </a>
+        <a href="#epoque">
+          <div class="block m-4">
+            <span class="tag is-info">GET </span>
+            http://localhost:1337/api/dinosaures/1?populate=epoque
+          </div>
+        </a>
+        <a href="#famille">
+          <div class="block m-4">
+            <span class="tag is-info">GET </span>
+            http://localhost:1337/api/dinosaures/1?populate=famille
+          </div>
+        </a>
+        <a href="#musees">
+          <div class="block m-4">
+            <span class="tag is-info">GET </span>
+            http://localhost:1337/api/musees/1?populate=dinosaures
+          </div>
+        </a>
+        <a href="#locomotions">
+          <div class="block m-4">
+            <span class="tag is-info">GET </span>
+            http://localhost:1337/api/locomotions/3?populate=dinosaures
+          </div>
+        </a>
+        <p class="subtitle is-5 MT-4">
+          Notre API offre une flexibilité exceptionnelle pour répondre à toutes
+          vos questions sur les dinosaures, qu'il s'agisse de leur histoire, de
+          leur habitat, de leur alimentation, ou de leurs liens avec les musées.
+          Explorez le monde des dinosaures dès maintenant avec DinotoAPI !
+        </p>
+        <div class="block mt-4">
+          <h3 class="subtitle is-3">Maniabilité</h3>
+          <p>exemple :</p>
+          <div class="box m-4 p-1 has-background-grey-lighter">
+            <span class="tag is-info mb-3">GET </span>
+            http://localhost:1337/api/dinosaures/2
+            <p>
+              Cette requête vise à récupérer les détails du dinosaure ayant l'ID
+              2.
+            </p>
+          </div>
+
+          <div class="box m-4 p-1 has-background-grey-lighter">
+            <span class="tag is-info mb-3">GET </span>
+            http://localhost:1337/api/dinosaures/1?populate=environement,epoque
+            <p>
+              Cette requête vise à récupérer les détails du dinosaure ayant l'ID
+              1 tout en incluant à la fois des informations sur son
+              environnement et sur l'époque à laquelle il a vécu. Le résultat
+              inclura donc des données détaillées sur le dinosaure, son
+              environnement et son époque.
+            </p>
+          </div>
+        </div>
+        <div class="block mt-4">
+          <h2 class="subtitle is-1" id="all">Découvrez les dinosaures</h2>
+          <p>
+            Explorez notre collection complète de dinosaures, chacun avec des
+            détails fascinants tels que leur nom, une image illustrative, leur
+            taille, poids, description, et bien plus encore. Accédez à ces
+            informations en utilisant l'endpoint simple :
+          </p>
+        </div>
+        <div class="block mt-4">
+          <span class="tag is-info">GET </span>
+          http://localhost:1337/api/dinosaures/
+        </div>
+
+        <pre><code>
+        {
+          "data": [
+            {
+              "id": 1,
+              "attributes": {
+                "name": "Tyrannosaure Rex",
+                "img": "https://unsplash.com/fr/photos/illustration-de-dinosaure-brun-hYKG311mff8",
+                "hauteur": 400,
+                "longeur": 1200,
+                "poids": 9000,
+                "description": " Grand prédateur carnivore du Crétacé supérieur.",
+                "createdAt": "2023-12-14T15:30:36.292Z",
+                "updatedAt": "2023-12-14T15:42:59.411Z",
+                "publishedAt": "2023-12-14T15:42:59.404Z"
+              }
+            },
+            {
+              "id": 2,
+              "attributes": {
+                "name": "Tricératops",
+                "img": "https://unsplash.com/fr/photos/un-squelette-de-dinosaure-dans-une-vitrine-de-musee-aavl5e7QWOg",
+                "hauteur": 300,
+                "longeur": 900,
+                "poids": 6000,
+                "description": "Herbivore quadrupède avec trois cornes sur le crâne.",
+                "createdAt": "2023-12-14T15:46:34.475Z",
+                "updatedAt": "2023-12-14T15:46:37.631Z",
+                "publishedAt": "2023-12-14T15:46:37.625Z"
+              }
+            },
+            {
+              "id": 13,
+              "attributes": {
+                "name": "Qianlong shouhu",
+                "img": null,
+                "hauteur": null,
+                "longeur": 1000,
+                "poids": 1000,
+                "description": " Qianlong shouhu appartient à un groupe de dinosaures connus sous le nom de sauropodomorphes",
+                "createdAt": "2023-12-15T14:00:19.536Z",
+                "updatedAt": "2023-12-15T14:00:24.366Z",
+                "publishedAt": "2023-12-15T14:00:24.360Z"
+              }
+            },
+          }
+          ...
+      </code></pre>
+        <div class="block mt-4" id="continent">
+          <h2 class="subtitle is-1">
+            Contextualisez avec des détails supplémentaires
+          </h2>
+          <p>
+            Enrichissez votre compréhension des dinosaures en utilisant les
+            endpoints pour récupérer des détails supplémentaires tels que le
+            continent, l'environnement, l'époque, la famille, et le régime
+            alimentaire associés à chaque dinosaure.
+          </p>
+        </div>
+        <div class="block mt-4">
+          <span class="tag is-info">GET </span>
+          http://localhost:1337/api/dinosaures/1?populate=continent
+        </div>
+        <pre><code>
+        {
+          "data": {
+            "id": 1,
+            "attributes": {
+              "name": "Tyrannosaure Rex",
+              "img": "https://unsplash.com/fr/photos/illustration-de-dinosaure-brun-hYKG311mff8",
+              "hauteur": 400,
+              "longeur": 1200,
+              "poids": 9000,
+              "description": " Grand prédateur carnivore du Crétacé supérieur.",
+              "createdAt": "2023-12-14T15:30:36.292Z",
+              "updatedAt": "2023-12-14T15:42:59.411Z",
+              "publishedAt": "2023-12-14T15:42:59.404Z",
+              "continent": {
+                "data": {
+                  "id": 1,
+                  "attributes": {
+                    "label": "Amérique du Nord",
+                    "createdAt": "2023-12-14T15:31:16.810Z",
+                    "updatedAt": "2023-12-14T15:32:11.468Z",
+                    "publishedAt": "2023-12-14T15:32:11.460Z"
+                  }
+                }
+              }
+            }
+          },
+          "meta": {}
+        }
+      </code></pre>
+        <div class="block mt-4" id="environement">
+          <span class="tag is-info">GET </span>
+          http://localhost:1337/api/dinosaures/1?populate=environement
+        </div>
+        <p class="mb-4">
+          Cette requête vise à récupérer les détails du dinosaure ayant l'ID 1
+          et à inclure les informations sur son environnement. Le résultat
+          inclura des données telles que le nom du dinosaure, son image, sa
+          hauteur, sa longueur, son poids, sa description, ainsi que les détails
+          de son environnement (comme la "Terre" dans cet exemple).
+        </p>
+        <pre><code>
+        {
+          "data": {
+            "id": 1,
+            "attributes": {
+              "name": "Tyrannosaure Rex",
+              "img": "https://unsplash.com/fr/photos/illustration-de-dinosaure-brun-hYKG311mff8",
+              "hauteur": 400,
+              "longeur": 1200,
+              "poids": 9000,
+              "description": " Grand prédateur carnivore du Crétacé supérieur.",
+              "createdAt": "2023-12-14T15:30:36.292Z",
+              "updatedAt": "2023-12-14T15:42:59.411Z",
+              "publishedAt": "2023-12-14T15:42:59.404Z",
+              "environement": {
+                "data": {
+                  "id": 2,
+                  "attributes": {
+                    "label": "Terre",
+                    "createdAt": "2023-12-14T15:33:31.346Z",
+                    "updatedAt": "2023-12-14T15:43:04.782Z",
+                    "publishedAt": "2023-12-14T15:43:04.779Z"
+                  }
+                }
+              }
+            }
+          },
+          "meta": {}
+        }
+      </code></pre>
+        <div class="block mt-4" id="epoque">
+          <span class="tag is-info">GET </span>
+          http://localhost:1337/api/dinosaures/1?populate=epoque
+        </div>
+        <p class="mb-4">
+          Cette requête vise à obtenir les détails du dinosaure ayant l'ID 1 et
+          à inclure des informations sur son époque. Le résultat inclura les
+          mêmes informations de base sur le dinosaure, ainsi que des détails sur
+          l'époque à laquelle il a vécu (par exemple, le "Crétacé" dans cet
+          exemple).
+        </p>
+        <pre><code>
+        {
+          "data": {
+            "id": 1,
+            "attributes": {
+              "name": "Tyrannosaure Rex",
+              "img": "https://unsplash.com/fr/photos/illustration-de-dinosaure-brun-hYKG311mff8",
+              "hauteur": 400,
+              "longeur": 1200,
+              "poids": 9000,
+              "description": " Grand prédateur carnivore du Crétacé supérieur.",
+              "createdAt": "2023-12-14T15:30:36.292Z",
+              "updatedAt": "2023-12-14T15:42:59.411Z",
+              "publishedAt": "2023-12-14T15:42:59.404Z",
+              "epoque": {
+                "data": {
+                  "id": 2,
+                  "attributes": {
+                    "label": " Crétacé",
+                    "createdAt": "2023-12-14T15:34:31.625Z",
+                    "updatedAt": "2023-12-14T15:34:45.915Z",
+                    "publishedAt": "2023-12-14T15:34:45.906Z"
+                  }
+                }
+              }
+            }
+          },
+          "meta": {}
+        }
+      </code></pre>
+        <div class="block mt-4" id="famille">
+          <span class="tag is-info">GET </span>
+          http://localhost:1337/api/dinosaures/1?populate=famille
+        </div>
+        <pre><code>
+        {
+          "data": {
+            "id": 1,
+            "attributes": {
+              "name": "Tyrannosaure Rex",
+              "img": "https://unsplash.com/fr/photos/illustration-de-dinosaure-brun-hYKG311mff8",
+              "hauteur": 400,
+              "longeur": 1200,
+              "poids": 9000,
+              "description": " Grand prédateur carnivore du Crétacé supérieur.",
+              "createdAt": "2023-12-14T15:30:36.292Z",
+              "updatedAt": "2023-12-14T15:42:59.411Z",
+              "publishedAt": "2023-12-14T15:42:59.404Z",
+              "famille": {
+                "data": {
+                  "id": 1,
+                  "attributes": {
+                    "label": "Prédateurs",
+                    "createdAt": "2023-12-14T15:35:33.503Z",
+                    "updatedAt": "2023-12-14T15:35:34.329Z",
+                    "publishedAt": "2023-12-14T15:35:34.322Z"
+                  }
+                }
+              }
+            }
+          },
+          "meta": {}
+        }
+      </code></pre>
+        <div class="block mt-4" id="musees">
+          <span class="tag is-info">GET </span>
+          http://localhost:1337/api/musees/1?populate=dinosaures
+        </div>
+        <pre><code>
+        {
+          "data": {
+            "id": 1,
+            "attributes": {
+              "label": "Musée de paléontologie et d'anthropologie de l'Université de Pennsylvanie, USA",
+              "adresse": null,
+              "cp": null,
+              "ville": null,
+              "site_web": null,
+              "mail": null,
+              "img": null,
+              "createdAt": "2023-12-14T15:38:15.462Z",
+              "updatedAt": "2023-12-14T15:38:21.359Z",
+              "publishedAt": "2023-12-14T15:38:21.357Z",
+              "dinosaures": {
+                "data": [
+                  {
+                    "id": 8,
+                    "attributes": {
+                      "name": "Archaeopteryx",
+                      "img": null,
+                      "hauteur": 30,
+                      "longeur": 50,
+                      "poids": 1,
+                      "description": "Dinosaure aviaire précoce, considéré comme un lien vers les oiseaux",
+                      "createdAt": "2023-12-14T15:56:33.699Z",
+                      "updatedAt": "2023-12-14T15:56:34.859Z",
+                      "publishedAt": "2023-12-14T15:56:34.854Z"
+                    }
+                  },
+                  {
+                    "id": 10,
+                    "attributes": {
+                      "name": "Diplodocus",
+                      "img": null,
+                      "hauteur": 700,
+                      "longeur": 2500,
+                      "poids": 15000,
+                      "description": "Dinosaur à long cou avec une longue queue, vivant à la fin du Jurassique",
+                      "createdAt": "2023-12-14T16:01:32.006Z",
+                      "updatedAt": "2023-12-14T16:08:27.941Z",
+                      "publishedAt": "2023-12-14T16:01:33.259Z"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "meta": {}
+        }
+      </code></pre>
+        <div class="block mt-4" id="locomotions">
+          <span class="tag is-info">GET </span>
+          http://localhost:1337/api/locomotions/3?populate=dinosaures
+        </div>
+        <pre><code>
+        {
+          "data": {
+            "id": 3,
+            "attributes": {
+              "label": "Aucun direct (volait)",
+              "createdAt": "2023-12-14T15:37:52.101Z",
+              "updatedAt": "2023-12-14T15:37:58.542Z",
+              "publishedAt": "2023-12-14T15:37:58.539Z",
+              "dinosaures": {
+                "data": [
+                  {
+                    "id": 6,
+                    "attributes": {
+                      "name": "Pteranodon",
+                      "img": null,
+                      "hauteur": 180,
+                      "longeur": 600,
+                      "poids": 20,
+                      "description": "Ptérosaure volant avec une envergure impressionnante",
+                      "createdAt": "2023-12-14T15:53:11.041Z",
+                      "updatedAt": "2023-12-14T15:53:12.288Z",
+                      "publishedAt": "2023-12-14T15:53:12.284Z"
+                    }
+                  },
+                  {
+                    "id": 20,
+                    "attributes": {
+                      "name": "Pterodactylus",
+                      "img": null,
+                      "hauteur": null,
+                      "longeur": 91,
+                      "poids": 4,
+                      "description": " Le Pterodactylus est un dinosaure volant qui vivait il y a environ 150 millions à 145 millions d’années pendant la période du Jurassique supérieur.",
+                      "createdAt": "2023-12-15T14:24:18.563Z",
+                      "updatedAt": "2023-12-15T14:24:19.921Z",
+                      "publishedAt": "2023-12-15T14:24:19.914Z"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "meta": {}
+        }
+
+      </code></pre>
+        <div class="block mt-4" id="famille">
+          <span class="tag is-info">GET </span>
+          http://localhost:1337/api/familles/1?populate=dinosaures
+        </div>
+
+        <pre><code>
+        {
+          "data": {
+            "id": 1,
+            "attributes": {
+              "label": "Prédateurs",
+              "createdAt": "2023-12-14T15:35:33.503Z",
+              "updatedAt": "2023-12-14T15:35:34.329Z",
+              "publishedAt": "2023-12-14T15:35:34.322Z",
+              "dinosaures": {
+                "data": [
+                  {
+                    "id": 1,
+                    "attributes": {
+                      "name": "Tyrannosaure Rex",
+                      "img": "https://unsplash.com/fr/photos/illustration-de-dinosaure-brun-hYKG311mff8",
+                      "hauteur": 400,
+                      "longeur": 1200,
+                      "poids": 9000,
+                      "description": " Grand prédateur carnivore du Crétacé supérieur.",
+                      "createdAt": "2023-12-14T15:30:36.292Z",
+                      "updatedAt": "2023-12-14T15:42:59.411Z",
+                      "publishedAt": "2023-12-14T15:42:59.404Z"
+                    }
+                  },
+                  {
+                    "id": 9,
+                    "attributes": {
+                      "name": " Allosaurus",
+                      "img": null,
+                      "hauteur": 300,
+                      "longeur": 800,
+                      "poids": 2000,
+                      "description": "Grand prédateur du Jurassique avec des dents tranchantes",
+                      "createdAt": "2023-12-14T15:58:29.224Z",
+                      "updatedAt": "2023-12-14T15:58:30.723Z",
+                      "publishedAt": "2023-12-14T15:58:30.718Z"
+                    }
+                  },
+                  {
+                    "id": 17,
+                    "attributes": {
+                      "name": "Giganotosaurus",
+                      "img": null,
+                      "hauteur": null,
+                      "longeur": 1500,
+                      "poids": null,
+                      "description": null,
+                      "createdAt": "2023-12-15T14:18:53.016Z",
+                      "updatedAt": "2023-12-15T14:18:54.547Z",
+                      "publishedAt": "2023-12-15T14:18:54.540Z"
+                    }
+                  },
+                  {
+                    "id": 18,
+                    "attributes": {
+                      "name": "Dilophosaurus",
+                      "img": null,
+                      "hauteur": null,
+                      "longeur": 6,
+                      "poids": null,
+                      "description": "Le Dilophosaurus est un dinosaure carnivore qui se distingue par deux crêtes sur sa tête.",
+                      "createdAt": "2023-12-15T14:20:53.880Z",
+                      "updatedAt": "2023-12-15T14:20:55.594Z",
+                      "publishedAt": "2023-12-15T14:20:55.588Z"
+                    }
+                  },
+                  {
+                    "id": 21,
+                    "attributes": {
+                      "name": "Spinosaurus",
+                      "img": null,
+                      "hauteur": null,
+                      "longeur": 12000,
+                      "poids": 20000,
+                      "description": " Le Spinosaurus était le plus grand des dinosaures carnivores, avec une haute crête dorsale lui donnant un air de dragon préhistorique14",
+                      "createdAt": "2023-12-15T14:35:19.586Z",
+                      "updatedAt": "2023-12-15T14:35:21.159Z",
+                      "publishedAt": "2023-12-15T14:35:21.152Z"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "meta": {}
+        }
+      </code></pre>
+        <div class="block mt-4">
+          <span class="tag is-info">GET </span>
+          http://localhost:1337/api/regime-alimentaires/1?populate=dinosaures
+        </div>
+        <pre><code>
+        {
+          "data": {
+            "id": 1,
+            "attributes": {
+              "label": "Herbivore",
+              "createdAt": "2023-12-14T15:40:30.552Z",
+              "updatedAt": "2023-12-14T15:40:31.900Z",
+              "publishedAt": "2023-12-14T15:40:31.896Z",
+              "dinosaures": {
+                "data": [
+                  {
+                    "id": 2,
+                    "attributes": {
+                      "name": "Tricératops",
+                      "img": "https://unsplash.com/fr/photos/un-squelette-de-dinosaure-dans-une-vitrine-de-musee-aavl5e7QWOg",
+                      "hauteur": 300,
+                      "longeur": 900,
+                      "poids": 6000,
+                      "description": "Herbivore quadrupède avec trois cornes sur le crâne.",
+                      "createdAt": "2023-12-14T15:46:34.475Z",
+                      "updatedAt": "2023-12-14T15:46:37.631Z",
+                      "publishedAt": "2023-12-14T15:46:37.625Z"
+                    }
+                  },
+                  {
+                    "id": 4,
+                    "attributes": {
+                      "name": "Brachiosaure",
+                      "img": null,
+                      "hauteur": 1500,
+                      "longeur": 2500,
+                      "poids": 50000,
+                      "description": " Le Brachiosaure était un énorme dinosaure herbivore caractérisé par son long cou, sa queue relativement courte, et ses membres antérieurs significativement plus longs que les membres postérieurs, donnant à son corps une inclinaison vers l'avant. Son long cou lui permettait d'atteindre la végétation élevée.\n\nÉpoque : Jurassique supérieur (environ 154-153 millions d'années)",
+                      "createdAt": "2023-12-14T15:49:51.848Z",
+                      "updatedAt": "2023-12-15T13:30:42.829Z",
+                      "publishedAt": "2023-12-14T15:49:53.147Z"
+                    }
+                  },
+                  {
+                    "id": 5,
+                    "attributes": {
+                      "name": "Stegosaurus",
+                      "img": "https://unsplash.com/fr/photos/figurine-de-dinosaure-vert-et-marron-fwULOOEWHto",
+                      "hauteur": 400,
+                      "longeur": 700,
+                      "poids": 4000,
+                      "description": "Dinosaur à plaques osseuses et piques sur la queue",
+                      "createdAt": "2023-12-14T15:51:28.976Z",
+                      "updatedAt": "2023-12-14T16:09:44.400Z",
+                      "publishedAt": "2023-12-14T15:51:30.331Z"
+                    }
+                  },
+                  {
+                    "id": 7,
+                    "attributes": {
+                      "name": "Ankylosaurus",
+                      "img": null,
+                      "hauteur": 150,
+                      "longeur": 500,
+                      "poids": 5000,
+                      "description": "Dinosaure blindé avec une massue à la queue",
+                      "createdAt": "2023-12-14T15:54:34.992Z",
+                      "updatedAt": "2023-12-14T16:09:16.482Z",
+                      "publishedAt": "2023-12-14T15:54:36.295Z"
+                    }
+                  },
+                  {
+                    "id": 10,
+                    "attributes": {
+                      "name": "Diplodocus",
+                      "img": null,
+                      "hauteur": 700,
+                      "longeur": 2500,
+                      "poids": 15000,
+                      "description": "Dinosaur à long cou avec une longue queue, vivant à la fin du Jurassique",
+                      "createdAt": "2023-12-14T16:01:32.006Z",
+                      "updatedAt": "2023-12-14T16:08:27.941Z",
+                      "publishedAt": "2023-12-14T16:01:33.259Z"
+                    }
+                  },
+                  {
+                    "id": 12,
+                    "attributes": {
+                      "name": "Tuojiangosaurus",
+                      "img": null,
+                      "hauteur": 500,
+                      "longeur": 700,
+                      "poids": null,
+                      "description": ":Tuojiangosaurus est un genre éteint de dinosaures herbivores quadrupèdes de l’infra-ordre des stégosauriens qui vécut en Chine durant le Jurassique supérieur",
+                      "createdAt": "2023-12-15T13:56:43.871Z",
+                      "updatedAt": "2023-12-15T13:56:45.963Z",
+                      "publishedAt": "2023-12-15T13:56:45.953Z"
+                    }
+                  },
+                  {
+                    "id": 13,
+                    "attributes": {
+                      "name": "Qianlong shouhu",
+                      "img": null,
+                      "hauteur": null,
+                      "longeur": 1000,
+                      "poids": 1000,
+                      "description": " Qianlong shouhu appartient à un groupe de dinosaures connus sous le nom de sauropodomorphes",
+                      "createdAt": "2023-12-15T14:00:19.536Z",
+                      "updatedAt": "2023-12-15T14:00:24.366Z",
+                      "publishedAt": "2023-12-15T14:00:24.360Z"
+                    }
+                  },
+                  {
+                    "id": 14,
+                    "attributes": {
+                      "name": "iguanodon",
+                      "img": null,
+                      "hauteur": null,
+                      "longeur": 600,
+                      "poids": null,
+                      "description": " : L’Iguanodon était un grand dinosaure herbivore qui a vécu il y a 110 à 140 millions d’années",
+                      "createdAt": "2023-12-15T14:03:26.333Z",
+                      "updatedAt": "2023-12-15T14:03:27.918Z",
+                      "publishedAt": "2023-12-15T14:03:27.914Z"
+                    }
+                  },
+                  {
+                    "id": 15,
+                    "attributes": {
+                      "name": "Adratiklit",
+                      "img": null,
+                      "hauteur": null,
+                      "longeur": null,
+                      "poids": null,
+                      "description": "Adratiklit est un genre éteint de dinosaure herbivore stégosaurien qui vivait sur le supercontinent Gondwana pendant le Jurassique moyen",
+                      "createdAt": "2023-12-15T14:05:46.527Z",
+                      "updatedAt": "2023-12-15T14:05:48.216Z",
+                      "publishedAt": "2023-12-15T14:05:48.208Z"
+                    }
+                  },
+                  {
+                    "id": 16,
+                    "attributes": {
+                      "name": "Abydosaurus",
+                      "img": null,
+                      "hauteur": null,
+                      "longeur": null,
+                      "poids": null,
+                      "description": "Abydosaurus (abydosaure en français), qui signifie « lézard d'Abydos », est un genre éteint de dinosaures sauropodes, plus précisément un membre de la famille des brachiosauridés. Connu à partir d'un crâne et de matériel post-crânien, il a été trouvé dans des sédiments datant de la fin du Crétacé inférieur dans le nord-est de l'Utah, aux États-Unis.",
+                      "createdAt": "2023-12-15T14:17:07.777Z",
+                      "updatedAt": "2023-12-15T14:17:09.398Z",
+                      "publishedAt": "2023-12-15T14:17:09.389Z"
+                    }
+                  },
+                  {
+                    "id": 19,
+                    "attributes": {
+                      "name": "Parasaurolophus",
+                      "img": null,
+                      "hauteur": null,
+                      "longeur": null,
+                      "poids": null,
+                      "description": " Le Parasaurolophus est un grand dinosaure herbivore, au bec aplati, et portant une sorte de crête allongée à l’arrière du crâne.",
+                      "createdAt": "2023-12-15T14:22:24.195Z",
+                      "updatedAt": "2023-12-15T14:22:26.037Z",
+                      "publishedAt": "2023-12-15T14:22:26.008Z"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "meta": {}
+        }
+      </code></pre>
+      </div>
+    </section>
+    <script src="./asset/js/index.js"></script>
+  </body>
+</html>

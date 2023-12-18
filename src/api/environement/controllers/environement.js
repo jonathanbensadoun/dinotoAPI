@@ -1,0 +1,9 @@
+'use strict';
+
+/**
+ * environement controller
+ */
+
+const { createCoreController } = require('@strapi/strapi').factories;
+
+module.exports = createCoreController('api::environement.environement');

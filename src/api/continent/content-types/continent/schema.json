@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "continents",
+  "info": {
+    "singularName": "continent",
+    "pluralName": "continents",
+    "displayName": "continent",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    },
+    "dinosaures": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::dinosaure.dinosaure",
+      "mappedBy": "continent"
+    },
+    "dinosaure": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::dinosaure.dinosaure",
+      "mappedBy": "predateur"
+    }
+  }
+}

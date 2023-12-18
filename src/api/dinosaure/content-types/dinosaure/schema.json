@@ -1,0 +1,88 @@
+{
+  "kind": "collectionType",
+  "collectionName": "dinosaures",
+  "info": {
+    "singularName": "dinosaure",
+    "pluralName": "dinosaures",
+    "displayName": "dinosaure",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "img": {
+      "type": "string"
+    },
+    "hauteur": {
+      "type": "integer"
+    },
+    "longeur": {
+      "type": "integer"
+    },
+    "poids": {
+      "type": "integer"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "epoque": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::epoque.epoque",
+      "inversedBy": "dinosaures"
+    },
+    "environement": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::environement.environement",
+      "inversedBy": "dinosaures"
+    },
+    "musees": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::musee.musee",
+      "mappedBy": "dinosaures"
+    },
+    "regime_alimentaire": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::regime-alimentaire.regime-alimentaire",
+      "inversedBy": "dinosaures"
+    },
+    "continent": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::continent.continent",
+      "inversedBy": "dinosaures"
+    },
+    "locomotion": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::locomotion.locomotion",
+      "inversedBy": "dinosaures"
+    },
+    "famille": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::famille.famille",
+      "inversedBy": "dinosaures"
+    },
+    "predateurs": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::dinosaure.dinosaure",
+      "inversedBy": "predate"
+    },
+    "predate": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::dinosaure.dinosaure",
+      "inversedBy": "predateurs"
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "epoques",
+  "info": {
+    "singularName": "epoque",
+    "pluralName": "epoques",
+    "displayName": "epoque"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    },
+    "dinosaures": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::dinosaure.dinosaure",
+      "mappedBy": "epoque"
+    }
+  }
+}
