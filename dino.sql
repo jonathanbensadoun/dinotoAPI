@@ -1650,7 +1650,7 @@ ALTER TABLE public.upload_folders_id_seq OWNER TO dino;
 --
 -- Name: upload_folders_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: dino
 --
-
+S
 ALTER SEQUENCE public.upload_folders_id_seq OWNED BY public.upload_folders.id;
 
 
