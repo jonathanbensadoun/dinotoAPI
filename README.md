@@ -68,12 +68,12 @@ Creates pagination for the output; in this example, it displays the first page w
 
 ```json
 "meta": {
-		"pagination": {
-			"page": 1,
-			"pageSize": 8,
-			"pageCount": 4,
-			"total": 32
-		}
+    "pagination": {
+    "page": 1,
+    "pageSize": 8,
+    "pageCount": 4,
+    "total": 32
+  }
 }
 ```
 
@@ -201,11 +201,11 @@ Crée une pagination pour la sortie ; dans cet exemple, il affiche la première 
 ```json
 "meta": {
 		"pagination": {
-			"page": 1,
-			"pageSize": 8,
-			"pageCount": 4,
-			"total": 32
-		}
+		"page": 1,
+		"pageSize": 8,
+		"pageCount": 4,
+		"total": 32
+	}
 }
 ```
 #### [filters](https://docs.strapi.io/dev-docs/api/rest/filters-locale-publication#filtering)
