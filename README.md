@@ -62,9 +62,20 @@ Sorts the output in the desired order, in this example, it will be in alphabetic
 
 #### [pagination](https://docs.strapi.io/dev-docs/api/rest/sort-pagination#pagination)
 
-GET http://dinotoapi.com/api/dinosaures/1?pagination[page]=1&pagination[pageSize]=8
+GET http://dinotoapi.com/api/dinosaures/?pagination[page]=1&pagination[pageSize]=8
 
 Creates pagination for the output; in this example, it displays the first page with 8 dinosaurs.
+
+```json
+"meta": {
+		"pagination": {
+			"page": 1,
+			"pageSize": 8,
+			"pageCount": 4,
+			"total": 32
+		}
+}
+```
 
 #### [filters](https://docs.strapi.io/dev-docs/api/rest/filters-locale-publication#filtering)
 
@@ -183,10 +194,20 @@ Trie la sortie dans l'ordre souhaité, dans cet exemple, ce sera l'ordre alphab�
 
 #### [pagination](https://docs.strapi.io/dev-docs/api/rest/sort-pagination#pagination)
 
-- GET http://dinotoapi.com/api/dinosaures/1?pagination[page]=1&pagination[pageSize]=8
+- GET http://dinotoapi.com/api/dinosaures/?pagination[page]=1&pagination[pageSize]=8
 
 Crée une pagination pour la sortie ; dans cet exemple, il affiche la première page avec 8 dinosaures.
 
+```json
+"meta": {
+		"pagination": {
+			"page": 1,
+			"pageSize": 8,
+			"pageCount": 4,
+			"total": 32
+		}
+}
+```
 #### [filters](https://docs.strapi.io/dev-docs/api/rest/filters-locale-publication#filtering)
 
 GET http://dinotoapi.com/api/dinosaures?filters[name][$eq]=Velociraptor
