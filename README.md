@@ -1,58 +1,36 @@
-[Version française](#version-française)
-
-***
-# Table of Contents
-
-- [Table of Contents](#table-of-contents)
-- [dinotoapi](#dinotoapi)
-  - [Description](#description)
-  - [Documentation](#documentation)
-  - [API Endpoint](#api-endpoint)
-  - [Strapi Configuration](#strapi-configuration)
-    - [Examples of Parameters](#examples-of-parameters)
-      - [Sort](#sort)
-      - [pagination](#pagination)
-      - [filters](#filters)
-      - [fields](#fields)
-      - [populate](#populate)
-  - [Example Output](#example-output)
-  - [version-française](#version-française)
-- [Table des matières](#table-des-matières)
-- [dinotoAPI](#dinotoapi-1)
-  - [Description](#description-1)
-  - [Documentation](#documentation-1)
-  - [Point d'accès de l'API](#point-daccès-de-lapi)
-  - [Configuration Strapi](#configuration-strapi)
-  - [Exemples de Paramètres](#exemples-de-paramètres)
-      - [Sort](#sort-1)
-      - [pagination](#pagination-1)
-      - [filters](#filters-1)
-      - [fields](#fields-1)
-      - [populate](#populate-1)
-  - [Exemple de Sortie](#exemple-de-sortie)
 # dinotoapi
 
-## Description
 
-Dinoto is a RESTful API with free access to GET requests. All data in this API is fictional, and the images are generated using DALL-E. Its purpose is to provide a training resource for individuals seeking an API for front-end development practice.
+<details><summary> English version</summary>
 
-The API architecture was created using Strapi.
 
-## Documentation
+
+
+  <details><summary> Description</summary>
+
+  Dinoto is a RESTful API with free access to GET requests. All data in this API is fictional, and the images are generated using DALL-E. Its purpose is to provide a training resource for individuals seeking an API for front-end development practice.
+
+  The API architecture was created using Strapi.
+
+</details>
+<details><summary> Documentation</summary>
 
 The API documentation is accessible at http://dinotoapi.com/doc.
 
 You can easily visualize and test the data using tools like Insomnia.
+</details>
 
-## API Endpoint
+<details><summary> API Endpoint</summary>
 
 GET http://dinotoapi.com/api/dinosaures/
+</details>
 
-## Strapi Configuration
+<details><summary> Strapi Configuration </summary>
 
 Strapi allows us to configure the API URL quickly. Refer to the Strapi documentation for more details.
+</details>
 
-### Examples of Parameters
+<details><summary> Examples of Parameters </summary>
 
 #### [Sort](https://docs.strapi.io/dev-docs/api/rest/sort-pagination#sorting)
 
@@ -95,7 +73,9 @@ GET http://dinotoapi.com/api/dinosaures/1?populate=*
 
 Adds additional information to the output (continents, epochs, museums, etc.). The "*" symbol adds all available information.
 
-## Example Output
+</details>
+
+<details><summary> Example Output </summary>
 
 ```json
 {
@@ -130,61 +110,38 @@ Adds additional information to the output (continents, epochs, museums, etc.). T
 
 ```
 For more details on parameters, refer to the respective Strapi documentation links provided.
+</details>
+</details>
 
 ***
 
-## version-française
+<details><summary> version-française </summary>
 
-# Table des matières
 
-- [Table of Contents](#table-of-contents)
-- [dinotoapi](#dinotoapi)
-  - [Description](#description)
-  - [Documentation](#documentation)
-  - [API Endpoint](#api-endpoint)
-  - [Strapi Configuration](#strapi-configuration)
-    - [Examples of Parameters](#examples-of-parameters)
-      - [Sort](#sort)
-      - [pagination](#pagination)
-      - [filters](#filters)
-      - [fields](#fields)
-      - [populate](#populate)
-  - [Example Output](#example-output)
-  - [version-française](#version-française)
-- [Table des matières](#table-des-matières)
-- [dinotoAPI](#dinotoapi-1)
-  - [Description](#description-1)
-  - [Documentation](#documentation-1)
-  - [Point d'accès de l'API](#point-daccès-de-lapi)
-  - [Configuration Strapi](#configuration-strapi)
-  - [Exemples de Paramètres](#exemples-de-paramètres)
-      - [Sort](#sort-1)
-      - [pagination](#pagination-1)
-      - [filters](#filters-1)
-      - [fields](#fields-1)
-      - [populate](#populate-1)
-  - [Exemple de Sortie](#exemple-de-sortie)
-# dinotoAPI
 
-## Description
+
+<details><summary> Description </summary>
 Dinoto est une API REST avec un accès gratuit aux requêtes GET. Toutes les données de cette API sont fictives, et les images sont générées à l'aide de DALL-E. Son objectif est de fournir une ressource d'entraînement pour les personnes recherchant une API pour la pratique du développement front-end.
 
 L'architecture de l'API a été créée à l'aide de Strapi.
+  </details>
 
-## Documentation
+<details><summary> Documentation </summary>
 
 La documentation de l'API est accessible à l'adresse http://dinotoapi.com/doc.
 
 Vous pouvez facilement visualiser et tester les données à l'aide d'outils tels qu'Insomnia.
-
-## Point d'accès de l'API
+  </details>
+<details><summary> Point d'accès de l'API </summary>
 
 - GET http://dinotoapi.com/api/dinosaures/
+  </details>
 
-## Configuration Strapi
+<details><summary>Configuration Strapi </summary>
 Strapi nous permet de configurer rapidement l'URL de l'API. Consultez la documentation de [Strapi](https://docs.strapi.io/dev-docs/intro) pour plus de détails:
+</details>
 
-## Exemples de Paramètres
+<details><summary>Exemples de Paramètres</summary>
 
 #### [Sort](https://docs.strapi.io/dev-docs/api/rest/sort-pagination#sorting)
 
@@ -225,8 +182,8 @@ Sélectionne des champs spécifiques pour la sortie, dans cet exemple, le nom et
 - GET http://dinotoapi.com/api/dinosaures/1?populate=continent
 
 Ajoute des informations supplémentaires à la sortie (continents, époques, musées, etc.). Le symbole " * " ajoute toutes les informations disponibles.
-
-## Exemple de Sortie
+</details>
+<details><summary> Exemple de Sortie</summary>
 
 ```json
 {
@@ -260,4 +217,7 @@ Ajoute des informations supplémentaires à la sortie (continents, époques, mus
 }
 
 ```
+
 Pour plus de détails sur les paramètres, consultez les liens respectifs de la documentation Strapi fournis.
+</details>
+</details>
