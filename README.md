@@ -165,6 +165,7 @@ For more details on parameters, refer to the respective Strapi documentation lin
       - [fields](#fields-1)
       - [populate](#populate-1)
   
+  
 </details>
 
 ## Description
