@@ -1,9 +1,9 @@
+# dinotoapi
 [Version française](#version-française)
 
 ***
-# Table of Contents
+<details><summary> Table of Contents </summary>
 
-- [Table of Contents](#table-of-contents)
 - [dinotoapi](#dinotoapi)
   - [Description](#description)
   - [Documentation](#documentation)
@@ -15,9 +15,7 @@
       - [filters](#filters)
       - [fields](#fields)
       - [populate](#populate)
-  - [version-française](#version-française)
-- [Table des matières](#table-des-matières)
-- [dinotoAPI](#dinotoapi-1)
+  - [version française](#version-française)
   - [Description](#description-1)
   - [Documentation](#documentation-1)
   - [Point d'accès de l'API](#point-daccès-de-lapi)
@@ -28,7 +26,9 @@
       - [filters](#filters-1)
       - [fields](#fields-1)
       - [populate](#populate-1)
-# dinotoapi
+</details>
+
+
 
 ## Description
 
@@ -76,6 +76,7 @@ Creates pagination for the output; in this example, it displays the first page w
 }
 ```
 </details>
+
 #### [filters](https://docs.strapi.io/dev-docs/api/rest/filters-locale-publication#filtering)
 
 GET http://dinotoapi.com/api/dinosaures?filters[name][$eq]=Velociraptor
@@ -136,11 +137,11 @@ For more details on parameters, refer to the respective Strapi documentation lin
 
 ***
 
-## version-française
+## version française
 
-# Table des matières
+<details><summary> Table des matières </summary>
 
-- [Table of Contents](#table-of-contents)
+
 - [dinotoapi](#dinotoapi)
   - [Description](#description)
   - [Documentation](#documentation)
@@ -152,9 +153,7 @@ For more details on parameters, refer to the respective Strapi documentation lin
       - [filters](#filters)
       - [fields](#fields)
       - [populate](#populate)
-  - [version-française](#version-française)
-- [Table des matières](#table-des-matières)
-- [dinotoAPI](#dinotoapi-1)
+  - [version française](#version-française)
   - [Description](#description-1)
   - [Documentation](#documentation-1)
   - [Point d'accès de l'API](#point-daccès-de-lapi)
@@ -165,7 +164,8 @@ For more details on parameters, refer to the respective Strapi documentation lin
       - [filters](#filters-1)
       - [fields](#fields-1)
       - [populate](#populate-1)
-# dinotoAPI
+  
+</details>
 
 ## Description
 Dinoto est une API REST avec un accès gratuit aux requêtes GET. Toutes les données de cette API sont fictives, et les images sont générées à l'aide de DALL-E. Son objectif est de fournir une ressource d'entraînement pour les personnes recherchant une API pour la pratique du développement front-end.
