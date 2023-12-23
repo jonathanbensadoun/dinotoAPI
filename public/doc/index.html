@@ -1,65 +1,72 @@
 <!DOCTYPE html>
-<html lang="fr" >
+<html lang="fr">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>DinotoAPI</title>
     <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
     />
     <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/css/bulma-carousel.min.css"
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/css/bulma-carousel.min.css"
     />
     <link rel="stylesheet" href="./doc/asset/css/style.css" />
-
   </head>
   <body>
+    <nav
+      class="navbar has-background-white-ter is-fixed-top"
+      role="navigation"
+      aria-label="main navigation"
+    >
+      <div class="navbar-brand">
+        <a class="navbar-item" href="">
+          <h1 class="title">DinotoAPI</h1>
+        </a>
 
-      <nav class="navbar has-background-white-ter is-fixed-top" role="navigation" aria-label="main navigation">
-        <div class="navbar-brand">
-          <a class="navbar-item" href="">
-            <h1 class="title">
-              DinotoAPI
-            </h1>
-
-          </a>
-
-          <a
-            role="button"
-            class="navbar-burger has-dropdown is-hoverable"
-            aria-label="menu"
-            aria-expanded="true"
-            data-target="navbarBasicExample"
-          >
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-          </a>
-
-
+        <a
+          role="button"
+          class="navbar-burger has-dropdown is-hoverable"
+          aria-label="menu"
+          aria-expanded="true"
+          data-target="navbarBasicExample"
+        >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
       </div>
 
-        <div class="navbar-menu">
-          <div class="navbar-start">
-            <a class="navbar-item" href="#home"> Home </a>
+      <div class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item" href="#home"> Home </a>
 
-            <a class="navbar-item" href="#all"> Documentation </a>
+          <a class="navbar-item" href="#all"> Documentation </a>
 
-            <div class="navbar-item has-dropdown is-hoverable">
-              <a class="navbar-link"> More </a>
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link"> More </a>
 
-              <div class="navbar-dropdown">
-                <a class="navbar-item" href="#about"> About </a>
-                <a class="navbar-item" href="mailto:jonathan.ben-sadoun@oclock.school"> Contact </a>
-                <hr class="navbar-divider" />
-                <a class="navbar-item" href="mailto:jonathan.ben-sadoun@oclock.school"> Report an issue </a>
-              </div>
+            <div class="navbar-dropdown">
+              <a class="navbar-item" href="#about"> About </a>
+              <a
+                class="navbar-item"
+                href="mailto:jonathan.ben-sadoun@oclock.school"
+              >
+                Contact
+              </a>
+              <hr class="navbar-divider" />
+              <a
+                class="navbar-item"
+                href="mailto:jonathan.ben-sadoun@oclock.school"
+              >
+                Report an issue
+              </a>
             </div>
           </div>
+        </div>
 
-          <!-- <div class="navbar-end">
+        <!-- <div class="navbar-end">
             <div class="navbar-item">
               <div class="buttons">
                 <a class="button is-primary">
@@ -69,27 +76,37 @@
               </div>
             </div>
           </div> -->
+      </div>
+      <div class="container-burger-menu">
+        <div
+          id="burger-menu-show"
+          class="box has-background-white-ter is-hidden"
+        >
+          <ul class="columns">
+            <li class="column"><a href="#home">Home</a></li>
+
+            <li class="column">
+              <a href="#about" class="a-menu-burger">About</a>
+            </li>
+
+            <li class="column">
+              <a
+                href="mailto: jonathan.ben-sadoun@oclock.school"
+                class="a-menu-burger"
+                >Contact</a
+              >
+            </li>
+          </ul>
         </div>
-        <div class="container-burger-menu ">
+      </div>
+    </nav>
 
-          <div id="burger-menu-show" class="box has-background-white-ter is-hidden">
-            <ul class="columns">
-                <li class="column"><a href="#home" >Home</a></li>
-
-                <li class="column"><a href="#about" class="a-menu-burger">About</a></li>
-
-                <li class="column"><a href="mailto: jonathan.ben-sadoun@oclock.school" class="a-menu-burger">Contact</a></li>
-
-            </ul>
-          </div>
-        </div>
-      </nav>
-
-
-
-    <section class="section ">
+    <section class="section">
       <div class="container">
-        <h1 class="title mt-4" id="home">DinotoAPI</h1>
+       <div class="box">
+
+         <h1 class="title mt-4" id="home">DinotoAPI</h1>
+       </div>
         <p class="subtitle" id="about">
           Bienvenue sur <strong>DinotoAPI </strong> - Votre source
           d'informations sur les dinosaures ! <strong>dinosaures</strong>!
@@ -102,52 +119,14 @@
           API vous fournit un accès simple et efficace à une mine
           d'informations.
         </p>
+        <p class="subtitle is-5 MT-4">
+          Dinoto est une API REST avec un accès gratuit aux requêtes GET. Toutes
+          les données de cette API sont fictives, et les images sont générées à
+          l'aide de DALL-E. Son objectif est de fournir une ressource
+          d'entraînement pour les personnes recherchant une API pour la pratique
+          du développement front-end.
+        </p>
 
-        <div class="block mt-4">
-          <p>Voici quelques exemples :</p>
-        </div>
-        <a href="#all">
-          <div class="block m-4">
-            <span class="tag is-info">GET </span>
-            http://dinotoapi.com/api/dinosaures/
-          </div>
-        </a>
-        <a href="#continent">
-          <div class="block m-4">
-            <span class="tag is-info">GET </span>
-            http://dinotoapi.com/api/dinosaures/1?populate=continent
-          </div>
-        </a>
-        <a href="#environement">
-          <div class="block m-4">
-            <span class="tag is-info">GET </span>
-            http://dinotoapi.com/api/dinosaures/1?populate=environement
-          </div>
-        </a>
-        <a href="#epoque">
-          <div class="block m-4">
-            <span class="tag is-info">GET </span>
-            http://dinotoapi.com/api/dinosaures/1?populate=epoque
-          </div>
-        </a>
-        <a href="#famille">
-          <div class="block m-4">
-            <span class="tag is-info">GET </span>
-            http://dinotoapi.com/api/dinosaures/1?populate=famille
-          </div>
-        </a>
-        <a href="#musees">
-          <div class="block m-4">
-            <span class="tag is-info">GET </span>
-            http://dinotoapi.com/api/musees/1?populate=dinosaures
-          </div>
-        </a>
-        <a href="#locomotions">
-          <div class="block m-4">
-            <span class="tag is-info">GET </span>
-            http://dinotoapi.com/api/locomotions/3?populate=dinosaures
-          </div>
-        </a>
         <p class="subtitle is-5 MT-4">
           Notre API offre une flexibilité exceptionnelle pour répondre à toutes
           vos questions sur les dinosaures, qu'il s'agisse de leur histoire, de
@@ -178,13 +157,69 @@
             </p>
           </div>
         </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <h2 class="subtitle is-1">Configuration Strapi</h2>
+        <p class="subtitle is-5 MT-4">
+          Strapi nous permet de configurer rapidement l'URL de l'API. Consultez
+          la documentation de
+          <a href="https://docs.strapi.io/dev-docs/intro">Strapi</a> pour plus
+          de détails.
+        </p>
+        <h2 class="subtitle is-1 mt-4">Exemples de Paramètres :</h3>
+          <div class="box">
+            <h3 class="subtitle is-3">Sort</h3>
+            <div class="block mt-4">
+            <span class="tag is-info">GET </span>
+            http://dinotoapi.com/api/dinosaures/1?sort[0]=name
+            </div>
+            <p>Trie la sortie dans l'ordre souhaité, dans cet exemple, ce sera l'ordre alphabétique des noms.</p>
+          </div>
+          <div class="box">
+            <h3 class="subtitle is-3">pagination</h3>
+            <div class="block mt-4">
+            <span class="tag is-info">GET </span>
+            http://dinotoapi.com/api/dinosaures/?pagination[page]=1&pagination[pageSize]=8
+            </div>
+            <p>Crée une pagination pour la sortie , dans cet exemple, il affiche la première page avec 8 dinosaures.</p>
+          </div>
+          <div class="box">
+            <h3 class="subtitle is-3">filters</h3>
+            <div class="block mt-4">
+            <span class="tag is-info">GET </span>
+            http://dinotoapi.com/api/dinosaures?filters[name][$eq]=Velociraptor
+            </div>
+            <p>Filtre la sortie en fonction du nom (par exemple, Velociraptor).</p>
+          </div>
+          <div class="box">
+            <h3 class="subtitle is-3">fields</h3>
+            <div class="block mt-4">
+            <span class="tag is-info">GET </span>
+            http://dinotoapi.com/api/dinosaures/1?fields[0]=name&fields[1]=img
+            </div>
+            <p>Sélectionne des champs spécifiques pour la sortie, dans cet exemple, le nom et l'image.</p>
+          </div>
+          <div class="box">
+            <h3 class="subtitle is-3">populate</h3>
+            <div class="block mt-4">
+            <span class="tag is-info">GET </span>
+            http://dinotoapi.com/api/dinosaures/1?populate=continent
+            </div>
+            <p>Ajoute des informations supplémentaires à la sortie (continents, époques, musées, etc.). Le symbole " * " ajoute toutes les informations disponibles.</p>
+          </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
         <div class="block mt-4">
-          <h2 class="subtitle is-1" id="all">Découvrez les dinosaures</h2>
-          <p>
+          <h2 class="subtitle is-1" id="all">Point d'accès de l'API</h2>
+          <p class="subtitle is-5 MT-4">
             Explorez notre collection complète de dinosaures, chacun avec des
             détails fascinants tels que leur nom, une image illustrative, leur
             taille, poids, description, et bien plus encore. Accédez à ces
-            informations en utilisant l'endpoint simple :
+            informations en utilisant l'endpoint :
           </p>
         </div>
         <div class="block mt-4">

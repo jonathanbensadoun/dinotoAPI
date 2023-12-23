@@ -48,7 +48,7 @@ GET http://dinotoapi.com/api/dinosaures/
 
 ## Strapi Configuration
 
-Strapi allows us to configure the API URL quickly. Refer to the Strapi documentation for more details.
+Strapi allows us to configure the API URL quickly. Refer to the [Strapi](https://docs.strapi.io/dev-docs/intro) documentation for more details.
 
 ### Examples of Parameters
 
@@ -184,7 +184,7 @@ Vous pouvez facilement visualiser et tester les données à l'aide d'outils tels
 - GET http://dinotoapi.com/api/dinosaures/
 
 ## Configuration Strapi
-Strapi nous permet de configurer rapidement l'URL de l'API. Consultez la documentation de [Strapi](https://docs.strapi.io/dev-docs/intro) pour plus de détails:
+Strapi nous permet de configurer rapidement l'URL de l'API. Consultez la documentation de [Strapi](https://docs.strapi.io/dev-docs/intro) pour plus de détails.
 
 ## Exemples de Paramètres
 
